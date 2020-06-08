@@ -4,7 +4,8 @@
   "description": "CRUD para igreso de proyectos",
   "main": "index.js",
   "scripts": {
-      "start": "node ./index.js"
+    "dev": "nodemon ./index.js",
+    "start": "node ./index.js"
   },
   "repository": {
     "type": "git",
@@ -23,5 +24,8 @@
   "homepage": "https://github.com/Rivera84/PracticaExamenNW#readme",
   "dependencies": {
     "express": "^4.17.1"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.4"
   }
 }
