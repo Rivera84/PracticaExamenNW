@@ -4,12 +4,15 @@ const express =  require("express"); //Exprees estara accesible atraves de esta 
 //Importamos todas las rutas disponibles
 const routes = require("./routes");
 
+//Creamos la conexion con la base de datos
+const db = require("./config/db");
+
 //Creamos un servidor de exprees
 const app = express(); /*Creamos una instancia de express por medio de la variable app
 inicializamos un servidor de express, todas las variables deben ser const o let*/
 
 //Indicamos a express donde estan las rutas del servidor
-    app.use("/", routes());
+app.use("/", routes());
 
 //Inicializamos el servidor en un puerto especifico
 app.listen(7000, ()=>{
