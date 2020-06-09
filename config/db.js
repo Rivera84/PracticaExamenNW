@@ -2,20 +2,21 @@
 const Sequelize = require("sequelize");
 
 //Importamos una libreria que ya esta incluida en express
-require("dotenv").config({ path: "variables.env" });
+require("dotenv").config({ path:"variables.env" });
 
 //Establecer los parametros de la conexion a la base de datos
 const db = new Sequelize(
-    "UsuariosProyecto", 
-   process.env.MYSQLUSER,
-  process.env.MYSQLPASS,
+
+  process.env.MYSQLDB,  //Nombre de la base de datos
+  process.env.MYSQLUSER, //Nombre del usuario
+  process.env.MYSQLPASS, //Contraseña
   {
-    host: "localhost",
-    dialect: "mysql",
-    port: process.env.MYSQLPORT,
+    host:process.env.MYSQLHOST, //Host
+    dialect:"mysql",
+    port:process.env.MYSQLPORT, //Puerto a conectarse
     operatorAliases: false,
     define: {
-      timestamps: false,
+      timestamps:false,
     },
     pool: {
       max: 5,

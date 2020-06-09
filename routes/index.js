@@ -11,6 +11,7 @@ las rutas deben exportarse para poder ser usada en otros archivos
 */
 module.exports = function(){
     router.get("/", usersController.home); //utilizamos un metodo get porque cada vez que solicitamos informacion a un servidor utilizamos get
+    router.get("/user", usersController.user); //utilizamos un metodo get porque cada vez que solicitamos informacion a un servidor utilizamos get
 
     return router;
 }
